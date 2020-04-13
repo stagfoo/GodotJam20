@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/mech-colid.obj-16d3152f273dc5eb394286d5c3e7615e.mesh"
+
+[deps]
+
+files=[ "res://.import/mech-colid.obj-16d3152f273dc5eb394286d5c3e7615e.mesh" ]
+
+source_file="res://assets/mesh/mech-colid.obj"
+dest_files=[ "res://.import/mech-colid.obj-16d3152f273dc5eb394286d5c3e7615e.mesh", "res://.import/mech-colid.obj-16d3152f273dc5eb394286d5c3e7615e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

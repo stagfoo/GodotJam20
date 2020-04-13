@@ -1,0 +1,120 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/stump.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 0.0
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.274881, 0.001, 0.251552 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.85843, 9.96117, 1.33717 )
+visible = false
+light_color = Color( 0.917647, 0.960784, 0.396078, 1 )
+light_energy = 4.88
+omni_range = 35.3097
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, 3.75074, 9.25054, 16.2072 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -1.76353, 16.0659, 5.98279 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -1.76353, 20.4119, 1.18038 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -1.76353, 16.2001, -4.63917 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin10" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -14.1875, 16.2001, 3.51249 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin11" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -14.1875, 20.0253, 3.51249 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin12" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -14.1875, 23.2685, 3.51249 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, 3.75074, 9.25054, -16.477 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, 12.7482, 8.69937, 13.0423 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin13" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, 25.6946, 15.6914, 8.58602 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin14" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, 25.6946, 15.6914, -5.15761 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, 12.7482, 8.69937, -15.3004 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -4.46083, 7.92492, 16.4693 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 0.869201, 0, 0.494459, 0, 1, 0, -0.494459, 0, 0.869201, -4.46083, 7.92492, -16.2149 )
+mode = 0
+gravity_scale = 0.0
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42645, 5.99352, 0 )
+
+[node name="stump" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.07794, 0, -0.629494, 0, 1.97703, 0, 0.668395, 0, 1.95701, -1.38405, 1.58912, 0 )
+
+[node name="stump2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.07794, 0, -0.629494, 0, 1.97703, 0, 0.668395, 0, 1.95701, -8.40133, 1.58912, 4.80754 )
+
+[node name="stump3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.17482, 0, -0.175561, 0, 1.97703, 0, 0.18641, 0, 2.04825, 2.38183, 1.41841, 10.6196 )
+
+[node name="stump4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 2.17482, 0, -0.175561, 0, 1.97703, 0, 0.18641, 0, 2.04825, -6.98761, 2.81237, 14.2816 )
+
+[node name="Floor" type="StaticBody" parent="."]
+transform = Transform( 176.724, 0, 0, 0, 7.49257, 0, 0, 0, 199.602, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 2 )
+
+[editable path="player"]
