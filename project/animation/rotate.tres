@@ -1,0 +1,12 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "rotate"
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("worm")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0.491466, -0.493172, 0.507813, 0.507316, 1, 1, 1, 0.3, 1, 0, 0, 0, -0.32941, 0.329352, 0.626593, 0.624817, 1, 1, 1, 0.8, 1, 0, 0, 0, -0.681384, 0.683105, -0.185633, -0.186076, 1, 1, 1, 1, 1, 0, 0, 0, 0.491466, -0.493172, 0.507813, 0.507316, 1, 1, 1 )

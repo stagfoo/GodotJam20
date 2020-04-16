@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/mesh/chicken.fbx" type="PackedScene" id=1]
+[ext_resource path="res://material/beak.tres" type="Material" id=2]
+[ext_resource path="res://material/red.tres" type="Material" id=3]
+[ext_resource path="res://material/black.tres" type="Material" id=4]
+[ext_resource path="res://material/white.tres" type="Material" id=5]
+
+[sub_resource type="Animation" id=3]
+resource_name = "jump"
+length = 0.625
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 5.20928e-17, 1.34291, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 124.482, 0.0666667, 1, 5.20928e-17, 1.34291, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 112.674, 0.133333, 1, 5.20928e-17, 1.46523, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 120.296, 0.2, 1, 5.20928e-17, 1.77442, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 122.927, 0.266667, 1, 5.20928e-17, 2.03775, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 104.813, 0.333333, 1, 5.20928e-17, 2.15837, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 92.001, 0.4, 1, 5.20928e-17, 1.86276, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 95.7753, 0.466667, 1, 5.20928e-17, 1.44484, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 104.327, 0.533333, 1, 5.20928e-17, 1.34291, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 115.295, 0.6, 1, 5.20928e-17, 1.34291, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 123.128, 0.666667, 1, 5.20928e-17, 1.34291, -0.00808983, -0.707107, 0, 0, 0.707107, 124.482, 124.482, 124.482 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature:body")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("Armature:head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[node name="chicken" instance=ExtResource( 1 )]
+transform = Transform( 0.699999, 0.00131567, 1.42644e-06, -0.00131567, 0.699997, 0.00151115, 1.42506e-06, -0.00151115, 0.699998, 0, 0, 0 )
+
+[node name="Armature" parent="." index="0"]
+transform = Transform( 124.482, -2.91038e-11, 2.3453e-08, 4.26223e-09, -1.48416e-05, 124.482, -2.91038e-11, -124.482, -1.48118e-05, 1.57296e-10, 1.34291, -0.00808983 )
+
+[node name="Icosphere" parent="Armature" index="1"]
+transform = Transform( 1, 4.54747e-13, -1.69437e-10, -4.54747e-13, 1, 0, 2.86908e-11, 0, 1, 0, 0, 0 )
+material/0 = ExtResource( 5 )
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 4 )
+material/3 = ExtResource( 3 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+anims/jump = SubResource( 3 )

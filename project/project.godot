@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="chickenegg"
+config/name="so the chicken came first?"
 run/main_scene="res://gui/menu/menu.tscn"
 config/icon="res://icon.png"
 
