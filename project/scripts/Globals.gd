@@ -1,7 +1,7 @@
 extends Node
 
 var current_scene = null
-var coin_value = 10
+var coin_value = 1
 
 func _ready():
 	var root = get_tree().get_root()
