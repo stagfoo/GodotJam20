@@ -8,9 +8,12 @@ func _ready():
 func _physics_process(delta):
 	get_node("AnimationPlayer").play("rotate")
 	pass
-func _on_Coin_body_entered(body):
+
+func _on_Coin_body_shape_entered(body_id, body, body_shape, local_shape):
 	var name = body.get_name()
 	if(name == 'player'):
+		print("_on_Coin_body_shape_entered")
+		PlayerVars.points += _Globals.coin_value
+		print(PlayerVars.points)
 		self.queue_free()
-		return
 	pass # Replace with function body.

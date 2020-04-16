@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/chick.tscn" type="PackedScene" id=2]
@@ -7,8 +7,14 @@
 [ext_resource path="res://scenes/chicken.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/egg.tscn" type="PackedScene" id=6]
 
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.951634, 1.77259, 1 )
+[sub_resource type="CapsuleShape" id=3]
+
+[sub_resource type="CapsuleShape" id=4]
+radius = 1.30652
+height = 0.292382
+
+[sub_resource type="CapsuleShape" id=5]
+height = 1.88869
 
 [sub_resource type="BoxShape" id=2]
 
@@ -20,14 +26,23 @@ enabled = true
 cast_to = Vector3( 0, -3, 0 )
 
 [node name="CamRay" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.982739, 0.184998, 0, -0.184998, 0.982739, -0.231992, 5.72172, -1.70185 )
+transform = Transform( 1, 0, 0, 0, 0.996172, -0.0874163, 0, 0.0874163, 0.996172, -0.231992, 5.72172, -1.70185 )
 enabled = true
 cast_to = Vector3( 0, 1.6, -10 )
 
 [node name="0-c" type="CollisionShape" parent="."]
-transform = Transform( 0.6, 0, 0, 0, 0.513271, 0, 0, 0, 0.6, 0, 0.245661, 0 )
+transform = Transform( 0.793549, 0, 0, 0, 0.948643, 0, 0, 0, 0.543231, 0, 0.245661, 0 )
 visible = false
-shape = SubResource( 1 )
+shape = SubResource( 3 )
+
+[node name="1-c" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1.57038, 0, 0, 0, 1, 0, 0.732106, 0 )
+visible = false
+shape = SubResource( 4 )
+
+[node name="2-c" type="CollisionShape" parent="."]
+transform = Transform( 1.66579, 0, 0, 0, 2.19284, 0, 0, 0, 1, 0, 0.895227, 0 )
+shape = SubResource( 5 )
 
 [node name="0-m" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.7, 0, 0, 0, 0.714181, 0, 0, 0, 0.7, 0, 0, 0 )
@@ -37,17 +52,8 @@ visible = false
 transform = Transform( -0.00922386, 0, -0.699939, 0, 0.7, 0, 0.699939, 0, -0.00922386, 0, -2.00463, 0 )
 visible = false
 
-[node name="1-c" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1.41403, 0, 0, 0, 1, 0, 0.800869, 0 )
-visible = false
-shape = SubResource( 1 )
-
 [node name="2-m" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.0131769, 0, -0.999913, 0, 1, 0, 0.999913, 0, -0.0131769, 0, -2.23439, 0 )
-
-[node name="2-c" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.895227, 0 )
-shape = SubResource( 1 )
 
 [node name="target" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0238599, 0, 0 )
@@ -70,3 +76,6 @@ transform = Transform( 0.341725, 0, 0, 0, 0.459445, 0, 0, 0, 0.295475, 0.166587,
 shape = SubResource( 2 )
 
 [node name="HUD" parent="Area" instance=ExtResource( 4 )]
+margin_top = 1.0
+margin_right = 202.0
+margin_bottom = 90.0

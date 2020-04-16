@@ -210,6 +210,7 @@ transform = Transform( -0.104751, 0, -2.748, 0, 2.75, 0, 2.748, 0, -0.104751, -0
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -35.7895, 1.26637, 3.28656 )
+input_capture_on_drag = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )

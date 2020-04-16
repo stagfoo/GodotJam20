@@ -13,7 +13,7 @@ var traction
 var SPEED = 14
 var ACCELERATION = 20
 const DECELERATION = 10
-const JUMP_HEIGHT = 15
+var JUMP_HEIGHT = 15
 var lifecycle = 0
 var is_moving = false
 var can_jump = false
@@ -43,6 +43,7 @@ func make_egg():
 	chick_m.hide()
 
 func make_chick():
+	JUMP_HEIGHT = 20
 	chick_c.disabled = false
 	chicken_c.disabled = true
 	egg_c.disabled = true
@@ -51,6 +52,7 @@ func make_chick():
 	egg_m.hide()
 	
 func make_chicken():
+	JUMP_HEIGHT = 15
 	chicken_c.disabled = false
 	egg_c.disabled = true
 	chick_c.disabled = true
@@ -61,12 +63,9 @@ func make_chicken():
 func chicken_tick():
 	if(is_chicken):
 		lifecycle += 1
-		print(lifecycle)
-	
 func chick_tick():
 	if(is_chic):
 		lifecycle += 1
-		print(lifecycle)
 func _ready():
 	character = get_node(".")
 	
@@ -161,16 +160,15 @@ func _physics_process(delta):
 			return
 	else:
 		if(is_chic):
+			#flying
 			can_jump = false
-			
-			print('flying')
 			chicken_m.get_node("AnimationPlayer").play("fly")
 	if is_on_wall():
 		can_jump = false
 		return
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		print("Collided with: ", collision.collider.name)
+		#print("Collided with: ", collision.collider.name)
 	return
 
 
@@ -206,7 +204,9 @@ func loop_controls():
 
 func _on_Coin_body_entered(body):
 	var name = body.get_name()
+	print("from player")
+	print(name)
 	if(name == 'player'):
-		PlayerVars.points += _Globals.coin_value
+		
 		return
 	pass # Replace with function body.
