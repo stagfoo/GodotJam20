@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="so the chicken came first?"
 run/main_scene="res://gui/menu/menu.tscn"
+boot_splash/image="res://splash.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
 
@@ -24,6 +25,10 @@ config/icon="res://icon.png"
 
 _Globals="*res://scripts/Globals.gd"
 PlayerVars="*res://scripts/PlayerVars.gd"
+
+[display]
+
+window/size/resizable=false
 
 [input]
 

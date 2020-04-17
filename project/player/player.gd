@@ -55,7 +55,7 @@ func make_chick():
 	
 func make_chicken():
 	PlayerVars.player_state = "CHICKEN"
-	JUMP_HEIGHT = 15
+	JUMP_HEIGHT = 10
 	chicken_c.disabled = false
 	egg_c.disabled = true
 	chick_c.disabled = true

@@ -35,14 +35,14 @@ tracks/2/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 
 transform = Transform( 0.699999, 0.00131567, 1.42644e-06, -0.00131567, 0.699997, 0.00151115, 1.42506e-06, -0.00151115, 0.699998, 0, 0, 0 )
 
 [node name="Armature" parent="." index="0"]
-transform = Transform( 124.482, -2.91038e-11, 2.3453e-08, 4.26223e-09, -1.48416e-05, 124.482, -2.91038e-11, -124.482, -1.48118e-05, 1.57296e-10, 1.34291, -0.00808983 )
+transform = Transform( 124.482, 0, 0, 0, -1.48394e-05, 124.482, 0, -124.482, -1.48394e-05, 5.20928e-17, 1.34291, -0.00808983 )
 
 [node name="Icosphere" parent="Armature" index="1"]
 transform = Transform( 1, 4.54747e-13, -1.69437e-10, -4.54747e-13, 1, 0, 2.86908e-11, 0, 1, 0, 0, 0 )
 material/0 = ExtResource( 5 )
-material/1 = ExtResource( 2 )
-material/2 = ExtResource( 4 )
-material/3 = ExtResource( 3 )
+material/1 = ExtResource( 3 )
+material/2 = ExtResource( 2 )
+material/3 = ExtResource( 4 )
 
 [node name="AnimationPlayer" parent="." index="1"]
 anims/jump = SubResource( 1 )

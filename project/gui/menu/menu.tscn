@@ -441,28 +441,31 @@ __meta__ = {
 }
 
 [node name="egg" type="Sprite" parent="ItemList"]
+visible = false
 position = Vector2( 767.023, 521.274 )
 rotation = -0.341952
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 5 )
 
 [node name="pacifist" type="Sprite" parent="ItemList"]
+visible = false
 position = Vector2( 826.719, 504.692 )
 rotation = 0.00253755
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 6 )
 
 [node name="dad" type="Sprite" parent="ItemList"]
+visible = false
 position = Vector2( 897.47, 521.274 )
 rotation = 0.207233
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="Start Game" type="Button" parent="ItemList"]
-margin_left = 607.929
-margin_top = 100.487
-margin_right = 942.929
-margin_bottom = 256.487
+margin_left = 648.832
+margin_top = 180.081
+margin_right = 983.832
+margin_bottom = 336.081
 action_mode = 0
 flat = true
 __meta__ = {
@@ -486,7 +489,7 @@ __meta__ = {
 }
 
 [node name="exit-button" type="Sprite" parent="ItemList/End Game"]
-position = Vector2( 95.8814, 50.5389 )
+position = Vector2( 52.7678, 110.235 )
 scale = Vector2( 0.480375, 0.480375 )
 texture = ExtResource( 2 )
 
