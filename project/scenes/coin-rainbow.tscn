@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/coin-rainbow.gd" type="Script" id=1]
+[ext_resource path="res://scenes/worm-rainbow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://animation/rotate.tres" type="Animation" id=3]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 1.30843
+height = 7.26042
+
+[node name="Coin" type="RigidBody"]
+transform = Transform( 0.99998, 0, -0.00638646, 0, 1, 0, 0.00638646, 0, 0.99998, 0, 0, 0 )
+mode = 2
+mass = 0.102041
+contacts_reported = 10
+contact_monitor = true
+can_sleep = false
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -4.64097e-08, 0.204554, 0.0109138, -1.06177, -8.94163e-09, 2.31438e-16, 3.76869e-10, -0.00166107, 1.34399, 0.0217963, -0.0502363, -0.119969 )
+shape = SubResource( 1 )
+
+[node name="worm" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.00523502, -0.999983, -0.00248453, 0.909139, 0.00579411, -0.416452, 0.416459, -7.86334e-05, 0.909154, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/rotate = ExtResource( 3 )
+[connection signal="body_shape_entered" from="." to="." method="_on_Coin_body_shape_entered"]

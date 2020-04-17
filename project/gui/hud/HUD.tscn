@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://gui/hud/HUD2.gd" type="Script" id=1]
 [ext_resource path="res://assets/texture/worm-hud.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Fredoka_One/FredokaOne-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/texture/rainbow-worm.png" type="Texture" id=4]
+[ext_resource path="res://assets/texture/egg.png" type="Texture" id=5]
+[ext_resource path="res://assets/texture/chich-hui.png" type="Texture" id=6]
+[ext_resource path="res://assets/texture/chicken.png" type="Texture" id=7]
+[ext_resource path="res://assets/texture/pointer.png" type="Texture" id=8]
+[ext_resource path="res://assets/texture/bar.png" type="Texture" id=9]
+[ext_resource path="res://assets/music/change.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/music/worm.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/texture/you-win.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 3 )
 
 [node name="HUD" type="TextureRect"]
 margin_left = 200.0
@@ -10,17 +24,108 @@ margin_right = 700.0
 margin_bottom = 350.0
 size_flags_horizontal = 3
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Value" type="RichTextLabel" parent="."]
-margin_right = 117.0
-margin_bottom = 40.0
-rect_scale = Vector2( 5, 5 )
+[node name="bar" type="Sprite" parent="."]
+position = Vector2( -104.732, 39.6726 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 9 )
+
+[node name="coins" type="RichTextLabel" parent="."]
+margin_left = -103.853
+margin_top = 463.509
+margin_right = 13.1475
+margin_bottom = 533.509
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/normal_font = SubResource( 1 )
+tab_size = 1
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="rainbow" type="RichTextLabel" parent="."]
+margin_left = 700.167
+margin_top = 463.829
+margin_right = 817.167
+margin_bottom = 533.829
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/normal_font = SubResource( 1 )
+tab_size = 1
+text = "0"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rainbow2" type="RichTextLabel" parent="."]
+margin_left = 734.043
+margin_top = 464.335
+margin_right = 851.043
+margin_bottom = 534.335
+rect_min_size = Vector2( 0, 60 )
+custom_fonts/normal_font = SubResource( 1 )
+tab_size = 1
+text = "/5"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="worm-hud" type="Sprite" parent="."]
-position = Vector2( -42, 30 )
+position = Vector2( -144.853, 500.183 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
+
+[node name="rainbow-worm" type="Sprite" parent="."]
+position = Vector2( 656.206, 494.546 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="endurance" type="RichTextLabel" parent="."]
+margin_left = -171.177
+margin_top = 47.5094
+margin_right = 228.823
+margin_bottom = 247.51
+rect_min_size = Vector2( 0, 60 )
+rect_scale = Vector2( 0.4, 0.4 )
+custom_fonts/normal_font = SubResource( 1 )
+tab_size = 1
+text = "Hen-durance"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="egg" type="Sprite" parent="."]
+position = Vector2( -30.3383, 35.12 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 5 )
+
+[node name="chicken" type="Sprite" parent="."]
+position = Vector2( -112.991, 28.4405 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="chich-hui" type="Sprite" parent="."]
+position = Vector2( -178.544, 29.0122 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="pointer" type="Sprite" parent="."]
+position = Vector2( -54.384, 48.558 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+
+[node name="coinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[node name="rainbowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+
+[node name="you-win" type="Sprite" parent="."]
+visible = false
+position = Vector2( 318.408, 237.326 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 12 )

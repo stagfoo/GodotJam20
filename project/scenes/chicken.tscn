@@ -6,7 +6,7 @@
 [ext_resource path="res://material/black.tres" type="Material" id=4]
 [ext_resource path="res://material/white.tres" type="Material" id=5]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "jump"
 length = 0.625
 tracks/0/type = "transform"
@@ -45,4 +45,4 @@ material/2 = ExtResource( 4 )
 material/3 = ExtResource( 3 )
 
 [node name="AnimationPlayer" parent="." index="1"]
-anims/jump = SubResource( 3 )
+anims/jump = SubResource( 1 )

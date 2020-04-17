@@ -5,7 +5,7 @@
 [ext_resource path="res://material/black.tres" type="Material" id=3]
 [ext_resource path="res://material/beak.tres" type="Material" id=4]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 resource_name = "walk"
 length = 0.416667
 loop = true
@@ -45,4 +45,4 @@ material/2 = ExtResource( 3 )
 material/3 = ExtResource( 2 )
 
 [node name="AnimationPlayer" parent="." index="1"]
-anims/walk = SubResource( 4 )
+anims/walk = SubResource( 1 )

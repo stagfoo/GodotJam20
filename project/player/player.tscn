@@ -7,16 +7,16 @@
 [ext_resource path="res://scenes/chicken.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/egg.tscn" type="PackedScene" id=6]
 
-[sub_resource type="CapsuleShape" id=3]
+[sub_resource type="CapsuleShape" id=1]
 
-[sub_resource type="CapsuleShape" id=4]
+[sub_resource type="CapsuleShape" id=2]
 radius = 1.30652
 height = 0.292382
 
-[sub_resource type="CapsuleShape" id=5]
+[sub_resource type="CapsuleShape" id=3]
 height = 1.88869
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=4]
 
 [node name="player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -33,16 +33,16 @@ cast_to = Vector3( 0, 1.6, -10 )
 [node name="0-c" type="CollisionShape" parent="."]
 transform = Transform( 0.793549, 0, 0, 0, 0.948643, 0, 0, 0, 0.543231, 0, 0.245661, 0 )
 visible = false
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="1-c" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.57038, 0, 0, 0, 1, 0, 0.732106, 0 )
 visible = false
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="2-c" type="CollisionShape" parent="."]
 transform = Transform( 1.66579, 0, 0, 0, 2.19284, 0, 0, 0, 1, 0, 0.895227, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="0-m" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.7, 0, 0, 0, 0.714181, 0, 0, 0, 0.7, 0, 0, 0 )
@@ -73,7 +73,7 @@ transform = Transform( 3.19486, 0.00483131, -0.000178656, -0.00748769, 2.0623, -
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 0.341725, 0, 0, 0, 0.459445, 0, 0, 0, 0.295475, 0.166587, 0.107831, -2.46427 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="HUD" parent="Area" instance=ExtResource( 4 )]
 margin_top = 1.0

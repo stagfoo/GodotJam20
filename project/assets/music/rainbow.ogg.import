@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rainbow.ogg-1bb969e02344ca1de91858d295bc15eb.oggstr"
+
+[deps]
+
+source_file="res://assets/music/rainbow.ogg"
+dest_files=[ "res://.import/rainbow.ogg-1bb969e02344ca1de91858d295bc15eb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

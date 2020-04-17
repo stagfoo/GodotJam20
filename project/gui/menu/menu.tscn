@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://gui/menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/texture/exit-button.png" type="Texture" id=2]
 [ext_resource path="res://assets/texture/button-start.png" type="Texture" id=3]
 [ext_resource path="res://assets/texture/logo.png" type="Texture" id=4]
+[ext_resource path="res://assets/texture/GWJ-20-WC-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/texture/GWJ-20-WC-2.png" type="Texture" id=6]
+[ext_resource path="res://assets/texture/GWJ-20-WC-3.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.145098, 0.631373, 0.898039, 1 )
@@ -437,11 +440,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="egg" type="Sprite" parent="ItemList"]
+position = Vector2( 767.023, 521.274 )
+rotation = -0.341952
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+
+[node name="pacifist" type="Sprite" parent="ItemList"]
+position = Vector2( 826.719, 504.692 )
+rotation = 0.00253755
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+
+[node name="dad" type="Sprite" parent="ItemList"]
+position = Vector2( 897.47, 521.274 )
+rotation = 0.207233
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 7 )
+
 [node name="Start Game" type="Button" parent="ItemList"]
 margin_left = 607.929
-margin_top = 202.191
+margin_top = 100.487
 margin_right = 942.929
-margin_bottom = 358.191
+margin_bottom = 256.487
 action_mode = 0
 flat = true
 __meta__ = {
@@ -449,15 +470,15 @@ __meta__ = {
 }
 
 [node name="button-start" type="Sprite" parent="ItemList/Start Game"]
-position = Vector2( 176.466, 96.3297 )
+position = Vector2( 168.728, 77.5365 )
 scale = Vector2( 0.699432, 0.699432 )
 texture = ExtResource( 3 )
 
 [node name="End Game" type="Button" parent="ItemList"]
-margin_left = 609.867
-margin_top = 393.352
-margin_right = 944.867
-margin_bottom = 549.352
+margin_left = 793.376
+margin_top = 303.808
+margin_right = 993.376
+margin_bottom = 403.808
 action_mode = 0
 flat = true
 __meta__ = {
@@ -465,12 +486,12 @@ __meta__ = {
 }
 
 [node name="exit-button" type="Sprite" parent="ItemList/End Game"]
-position = Vector2( 215.273, 78.1759 )
+position = Vector2( 95.8814, 50.5389 )
 scale = Vector2( 0.480375, 0.480375 )
 texture = ExtResource( 2 )
 
 [node name="logo" type="Sprite" parent="."]
-position = Vector2( 305.163, 310.744 )
+position = Vector2( 325.062, 288.634 )
 scale = Vector2( 0.641061, 0.641061 )
 texture = ExtResource( 4 )
 [connection signal="pressed" from="ItemList/Start Game" to="ItemList" method="_on_Button_pressed"]

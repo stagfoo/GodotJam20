@@ -12,8 +12,6 @@ func _physics_process(delta):
 func _on_Coin_body_shape_entered(body_id, body, body_shape, local_shape):
 	var name = body.get_name()
 	if(name == 'player'):
-		print("_on_Coin_body_shape_entered")
 		PlayerVars.points += _Globals.coin_value
-		print(PlayerVars.points)
 		self.queue_free()
 	pass # Replace with function body.

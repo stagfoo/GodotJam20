@@ -28,7 +28,7 @@ transform = Transform( -4.64097e-08, 0.204554, 0.0109138, -1.06177, -8.94163e-09
 shape = SubResource( 1 )
 
 [node name="worm" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.00218423, -0.885407, -0.00124244, 0.0304885, 0.0010406, -0.999534, 0.999533, -0.00196658, 0.0304858, 0, 0, 0 )
+transform = Transform( 0.00579399, -0.999983, -8.38991e-05, 0.999983, 0.00579405, -0.000911048, 0.000911519, -7.8619e-05, 1, 0, 0, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/rotate = ExtResource( 3 )

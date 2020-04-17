@@ -29,12 +29,13 @@ var is_chic = false
 var is_chicken = false
 
 var chicken_threshold = 4
-var chick_threshold = 100
+var chick_threshold = 300
 var animationPlayer
 
 
 func make_egg():
 	lifecycle = 0
+	PlayerVars.player_state = "EGG"
 	egg_c.disabled = false
 	egg_m.show()
 	chicken_c.disabled = true
@@ -44,6 +45,7 @@ func make_egg():
 
 func make_chick():
 	JUMP_HEIGHT = 20
+	PlayerVars.player_state = "CHICK"
 	chick_c.disabled = false
 	chicken_c.disabled = true
 	egg_c.disabled = true
@@ -52,6 +54,7 @@ func make_chick():
 	egg_m.hide()
 	
 func make_chicken():
+	PlayerVars.player_state = "CHICKEN"
 	JUMP_HEIGHT = 15
 	chicken_c.disabled = false
 	egg_c.disabled = true
@@ -84,6 +87,7 @@ func _ready():
 	traction = get_node("Traction")
 	
 func _physics_process(delta):
+	PlayerVars.lifecycle = lifecycle
 	if(is_egg):
 		make_egg()
 	if(is_chic):
@@ -176,7 +180,7 @@ func _physics_process(delta):
 func loop_controls():
 	if(is_egg):
 		lifecycle = 0
-	if(is_moving && is_chic):
+	if(is_moving && is_chic && is_on_floor()):
 		chick_tick()
 	facing_direction = Vector3(0,0,0)
 	is_moving = false
